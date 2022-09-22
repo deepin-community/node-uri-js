@@ -1,0 +1,120 @@
+node-uri-js (4.4.0+dfsg-7) unstable; urgency=medium
+
+  * Team upload
+  * Fix d/watch:
+    + use GitHub tags instead of releases
+    + Fix filenamemangle
+
+ -- Yadd <yadd@debian.org>  Thu, 04 Nov 2021 14:40:59 +0100
+
+node-uri-js (4.4.0+dfsg-6) unstable; urgency=medium
+
+  * Team upload
+
+  [ Nilesh Patra ]
+  * [skip ci] Update email
+
+  [ Yadd ]
+  * Fix GitHub tags regex
+  * Update standards version to 4.6.0, no changes needed.
+
+ -- Yadd <yadd@debian.org>  Fri, 15 Oct 2021 15:26:03 +0200
+
+node-uri-js (4.4.0+dfsg-5) unstable; urgency=medium
+
+  * Reupload to unstable
+  * Drop legacy rollup-plugin-babel usage
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 01 Jan 2021 13:44:16 +0530
+
+node-uri-js (4.4.0+dfsg-4) experimental; urgency=medium
+
+  * Build with node-rollup-plugin-node-resolve 11
+    (polyfills plugin can come after commonjs and node-resolve plugins)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Dec 2020 18:20:43 +0530
+
+node-uri-js (4.4.0+dfsg-3) unstable; urgency=medium
+
+  * Drop usage of legacy rollup plugins
+  * Fix plugins location in rollup.config.js
+  * Use node-polyfills plugin for builtins usage
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 30 Dec 2020 18:10:34 +0530
+
+node-uri-js (4.4.0+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix typescript definitions
+  * Declare compliance with policy 4.5.1
+  * Modernize debian/watch
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 24 Dec 2020 06:08:30 +0100
+
+node-uri-js (4.4.0+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata (already
+    present in machine-readable debian/copyright).
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs
+  * Drop dependency to nodejs
+  * New upstream version 4.4.0+dfsg
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 24 Oct 2020 22:12:47 +0200
+
+node-uri-js (4.2.2+dfsg-6) unstable; urgency=medium
+
+  * Build with Babel7
+  * Drop compat, switch to debhelper-compat
+  * Add "Rules-requires-Root:no"
+  * Bump standards version to 4.5.0
+  * Add myself to uploaders
+
+ -- Nilesh Patra <npatra974@gmail.com>  Mon, 27 Apr 2020 17:03:10 +0530
+
+node-uri-js (4.2.2+dfsg-5) unstable; urgency=medium
+
+  [ Nilesh ]
+  * Team upload.
+  * Fix rollup.config.js in accordance to rollup version 0.68.2
+
+ -- Nilesh <npatra974@gmail.com>  Thu, 10 Oct 2019 20:05:21 +0530
+
+node-uri-js (4.2.2+dfsg-4) unstable; urgency=medium
+
+  * Team upload
+  * Switch install to pkg-js-tools
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 03 Aug 2019 15:44:19 +0200
+
+node-uri-js (4.2.2+dfsg-3) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.0
+  * Add debian/gbp.conf
+  * Move installed files to /usr/share/nodejs
+  * Add upstream/metadata
+  * Enable upstream test using pkg-js-tools
+  * Clean install
+  * Embed mocha-qunit-ui for tests only
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 13 Jul 2019 15:01:58 +0200
+
+node-uri-js (4.2.2+dfsg-2) unstable; urgency=medium
+
+  * Add missing copyright for Ariel Flesler
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 15 Jun 2019 19:05:44 +0530
+
+node-uri-js (4.2.2+dfsg-1) unstable; urgency=low
+
+  * Initial release (Closes: #908637)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 12 Sep 2018 10:43:10 +0530

@@ -1,0 +1,46 @@
+Change rollup.config.js according to the new rollup version
+
+Forwarded: https://github.com/garycourt/uri-js/pull/57
+
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -3,9 +3,7 @@
+ const packageJson = require('./package.json');
+ 
+ export default {
+-	entry : "dist/esnext/index.js",
+-	format : "umd",
+-	moduleName : "URI",
++	input : "dist/esnext/index.js",
+ 	plugins: [
+ 		resolve({
+ 			module: true,
+@@ -13,20 +11,13 @@
+ 			preferBuiltins: false
+ 		}),
+ 
+-		babel({
+-		  "presets": [
+-		    ["latest", {
+-		      "es2015": {
+-		        "modules": false
+-		      }
+-		    }]
+-		  ],
+-		  "plugins": ["external-helpers"],
+-		  "externalHelpers": false
+-		}
+-)
++		babel()
+ 	],
+-	dest  : "dist/es5/uri.all.js",
+-	sourceMap: true,
+-	banner: "/** @license URI.js v" + packageJson.version + " (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */"
++	output: {
++        	format : "umd",
++        	name : "URI",
++        	file  : "dist/es5/uri.all.js",
++        	sourcemap: true,
++        	banner: "/** @license URI.js v" + packageJson.version + " (c) 2011 Gary Court. License: http://github.com/garycourt/uri-js */"
++	}
+ }

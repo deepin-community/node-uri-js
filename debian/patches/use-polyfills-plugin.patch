@@ -1,0 +1,29 @@
+Forwarded: https://github.com/garycourt/uri-js/pull/57
+
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -1,17 +1,22 @@
+ import nodeResolve from '@rollup/plugin-node-resolve';
++import commonjs from '@rollup/plugin-commonjs';
++import nodePolyfills from 'rollup-plugin-node-polyfills';
+ import babel from '@rollup/plugin-babel';
+ const packageJson = require('./package.json');
+ 
+ export default {
+ 	input : "dist/esnext/index.js",
+ 	plugins: [
++		commonjs({
++                        transformMixedEsModules: true
++                }),
+ 		nodeResolve({
+ 			module: true,
+ 			jsnext: true,
+ 			preferBuiltins: false
+ 		}),
+-
+-		babel()
++		babel(),
++		nodePolyfills()
+ 	],
+ 	output: {
+         	format : "umd",
