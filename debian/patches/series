@@ -1,3 +1,4 @@
 fix_syntax.diff
 drop-legacy-plugins.patch
 use-polyfills-plugin.patch
+fix-for-rollup-3.patch
